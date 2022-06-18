@@ -1,0 +1,270 @@
+
+
+-------------------------------------------------------------------------------
+			ATS_NODE_CONFIGURATION :
++-------+-------+-------+-------+-------+-----------------------+-------+-----+
+| id	| level	| node	| id	| name	| IP			| index	| port|
++-------+-------+-------+-------+-------+-----------------------+-------+-----+
+|1	|OCC	|ATSD	|1	|ATSD	|  192.168.101.10	|1	|11001|
++-------+-------+-------+-------+-------+-----------------------+-------+-----+
+|1	|OCC	|ATSS	|2	|ATSS	|  192.168.101.50	|1	|11002|
++-------+-------+-------+-------+-------+-----------------------+-------+-----+
+|1	|OCC	|PC	|4	|PC	|  192.168.101.50	|1	|11004|
++-------+-------+-------+-------+-------+-----------------------+-------+-----+
+|1	|OCC	|DB	|5	|DB	|  192.168.101.50	|1	|11005|
++-------+-------+-------+-------+-------+-----------------------+-------+-----+
+|1	|OCC	|ATSD	|1	|ATSD	|  192.168.101.12	|6	|11001|
++-------+-------+-------+-------+-------+-----------------------+-------+-----+
+|1	|OCC	|ATSD	|1	|ATSD	|   192.168.34.23	|4	|11001|
++-------+-------+-------+-------+-------+-----------------------+-------+-----+
+|1	|OCC	|ATSD	|1	|ATSD	|    192.168.34.2	|5	|11001|
++-------+-------+-------+-------+-------+-----------------------+-------+-----+
+|1	|OCC	|ATSD	|1	|ATSD	|    192.168.34.6	|6	|11001|
++-------+-------+-------+-------+-------+-----------------------+-------+-----+
+|1	|OCC	|ATSS	|6	|AMSM	|  192.168.101.50	|1	|15001|
++-------+-------+-------+-------+-------+-----------------------+-------+-----+
+
+-------------------------------------------------------------------------------
+			BROADCAST_NODE_CONFIGURATION:
++-------+-------+-------+-------+-------+-----------------------+-------+-----+
+| id	| level	| node	| id	| name	| IP			| index	| port|
++-------+-------+-------+-------+-------+-----------------------+-------+-----+
+|100	|ALL	|ATSS	|2	|ATSS	| 192.168.255.255	|1	|45000|
++-------+-------+-------+-------+-------+-----------------------+-------+-----+
+
+
+[36m
+
+
+
+INIT_DATA REQUEST[0m[1m[32m
+0064(0010) -> DBA[0m[1m[36m
+DBA -> 0069[0897]	[0m	DBA_ATSS_SYSTEM_SELECTED_AUTHORITY_AREA[1m[36m
+DBA -> 0147[0030]	[0m	INIT_DBA_ATSS_SYS_PARAM_INFO[1m[36m
+DBA -> 0127[0101]	[0m	INIT_DBA_ATSS_SYSTEM_ALARM_PRIORITY[1m[36m
+DBA -> 0124[0301]	[0m	INIT_DBA_ATSS_SYSTEM_ROLLING_STOCK_INFO[1m[36m
+DBA -> 0121[1401]	[0m	INIT_DBA_ATSS_SYSTEM_PERFORMANCE_RUNNING_TIME_INFO [1m[36m
+DBA -> 0129[0801]	[0m	INIT_DBA_ATSS_SYSTEM_PLATFORM_DWELL_TIME[1m[36m
+DBA -> 0226[0066]	[0m	INIT_DBA_ATSS_SAFETY_COMMAND_COUNTER[1m[36m
+DBA -> 0213[0001]	[0m	INIT_DBA_ATSS_SEND_TRAIN_REGULATION_MODE[1m[32m
+				MODE = 3 (1-CUTOFF 2-HEADWAY 3-TIMETABLE)[0m[1m[36m
+DBA -> 0087[0259]	[0m	INIT_DBA_ATSS_TIME_TABLE_INFO[1m[32m
+				OWS_ID MATCHED [IN=1 = SELF=1][0m[1m[36m
+DBA -> 0165[0202]	[0m	INIT_DBA_ATSS_SYSTEM_JUNCTION_MODE_INFO[1m[36m
+DBA -> 0238[1303]	[0m	INIT_DBA_ATSS_HEADWAY_MODE_SETTING
++-------------------------------------------------------------------------------+
+INIT	= RIFrontCrossover_31_1_2022_registered.csv
+date	= 31/1/2022
+SW/LD	= 1
+state	= 2
++-------------------------------------------------------------------------------+[31m
+File Opened[0m[1m[32m
+0090 (1481) -> ATSD[0001][0m[1m[32m
+TIME-TABLE VALIDATION (RIFrontCrossover_31_1_2022_registered.csv): SUCCESSFUL[0m[35m[0m[1m[32m
+0033(0001) -> DBA[0m		MODE -> TIME_TABLE_MODE [31m
+IN:src=5,id=99 len =1276[0m
+TC31E INSERTED	current_train_id=9000	current_train_id=9000
+ -> ATSD: TC31E (31/105) R = 9000 T_id = 9000 ATSS_id = 9000 DIR = 1 Head=1 ATC =  4 p0_stp= 0 nxt_stn=0 nxt_plat=0 dest_stn=0 TH=0 SS=0 KDC=0 DM=0 CT=9001 radio=0 consist=0
+TC34E INSERTED	current_train_id=9001	current_train_id=9001
+ -> ATSD: TC34E (34/105) R = 9001 T_id = 9001 ATSS_id = 9001 DIR = 3 Head=1 ATC =  4 p0_stp= 0 nxt_stn=0 nxt_plat=0 dest_stn=0 TH=0 SS=0 KDC=0 DM=0 CT=9002 radio=0 consist=0
+ -> ATSD: TC31E (31/105) R = 9000 T_id = 9000 ATSS_id = 9000 DIR = 1 Head=1 ATC =  4 p0_stp= 0 nxt_stn=0 nxt_plat=0 dest_stn=0 TH=0 SS=0 KDC=0 DM=0 CT=9002 radio=0 consist=0
+ -> ATSD: TC34E (34/105) R = 9001 T_id = 9001 ATSS_id = 9001 DIR = 3 Head=1 ATC =  4 p0_stp= 0 nxt_stn=0 nxt_plat=0 dest_stn=0 TH=0 SS=0 KDC=0 DM=0 CT=9002 radio=0 consist=0
+ -> ATSD: TC31E (31/105) R = 9000 T_id = 9000 ATSS_id = 9000 DIR = 1 Head=1 ATC =  4 p0_stp= 0 nxt_stn=0 nxt_plat=0 dest_stn=0 TH=0 SS=0 KDC=0 DM=0 CT=9002 radio=0 consist=0
+ -> ATSD: TC34E (34/105) R = 9001 T_id = 9001 ATSS_id = 9001 DIR = 3 Head=1 ATC =  4 p0_stp= 0 nxt_stn=0 nxt_plat=0 dest_stn=0 TH=0 SS=0 KDC=0 DM=0 CT=9002 radio=0 consist=0
+ -> ATSD: TC31E (31/105) R = 9000 T_id = 9000 ATSS_id = 9000 DIR = 1 Head=1 ATC =  4 p0_stp= 0 nxt_stn=0 nxt_plat=0 dest_stn=0 TH=0 SS=0 KDC=0 DM=0 CT=9002 radio=0 consist=0
+ -> ATSD: TC34E (34/105) R = 9001 T_id = 9001 ATSS_id = 9001 DIR = 3 Head=1 ATC =  4 p0_stp= 0 nxt_stn=0 nxt_plat=0 dest_stn=0 TH=0 SS=0 KDC=0 DM=0 CT=9002 radio=0 consist=0
+ -> ATSD: TC31E (31/105) R = 9000 T_id = 9000 ATSS_id = 9000 DIR = 1 Head=1 ATC =  4 p0_stp= 0 nxt_stn=0 nxt_plat=0 dest_stn=0 TH=0 SS=0 KDC=0 DM=0 CT=9002 radio=0 consist=0
+ -> ATSD: TC34E (34/105) R = 9001 T_id = 9001 ATSS_id = 9001 DIR = 3 Head=1 ATC =  4 p0_stp= 0 nxt_stn=0 nxt_plat=0 dest_stn=0 TH=0 SS=0 KDC=0 DM=0 CT=9002 radio=0 consist=0
+
+-------------------------------------------------------------------------------
+			ATS_NODE_CONFIGURATION :
++-------+-------+-------+-------+-------+-----------------------+-------+-----+
+| id	| level	| node	| id	| name	| IP			| index	| port|
++-------+-------+-------+-------+-------+-----------------------+-------+-----+
+|1	|OCC	|ATSD	|1	|ATSD	|  192.168.101.10	|1	|11001|
++-------+-------+-------+-------+-------+-----------------------+-------+-----+
+|1	|OCC	|ATSS	|2	|ATSS	|  192.168.101.50	|1	|11002|
++-------+-------+-------+-------+-------+-----------------------+-------+-----+
+|1	|OCC	|PC	|4	|PC	|  192.168.101.50	|1	|11004|
++-------+-------+-------+-------+-------+-----------------------+-------+-----+
+|1	|OCC	|DB	|5	|DB	|  192.168.101.50	|1	|11005|
++-------+-------+-------+-------+-------+-----------------------+-------+-----+
+|1	|OCC	|ATSD	|1	|ATSD	|  192.168.101.12	|6	|11001|
++-------+-------+-------+-------+-------+-----------------------+-------+-----+
+|1	|OCC	|ATSD	|1	|ATSD	|   192.168.34.23	|4	|11001|
++-------+-------+-------+-------+-------+-----------------------+-------+-----+
+|1	|OCC	|ATSD	|1	|ATSD	|    192.168.34.2	|5	|11001|
++-------+-------+-------+-------+-------+-----------------------+-------+-----+
+|1	|OCC	|ATSD	|1	|ATSD	|    192.168.34.6	|6	|11001|
++-------+-------+-------+-------+-------+-----------------------+-------+-----+
+|1	|OCC	|ATSS	|6	|AMSM	|  192.168.101.50	|1	|15001|
++-------+-------+-------+-------+-------+-----------------------+-------+-----+
+
+-------------------------------------------------------------------------------
+			BROADCAST_NODE_CONFIGURATION:
++-------+-------+-------+-------+-------+-----------------------+-------+-----+
+| id	| level	| node	| id	| name	| IP			| index	| port|
++-------+-------+-------+-------+-------+-----------------------+-------+-----+
+|100	|ALL	|ATSS	|2	|ATSS	| 192.168.255.255	|1	|45000|
++-------+-------+-------+-------+-------+-----------------------+-------+-----+
+
+
+[36m
+
+
+
+INIT_DATA REQUEST[0m[1m[32m
+0064(0010) -> DBA[0m[1m[36m
+DBA -> 0069[0897]	[0m	DBA_ATSS_SYSTEM_SELECTED_AUTHORITY_AREA[1m[36m
+DBA -> 0147[0030]	[0m	INIT_DBA_ATSS_SYS_PARAM_INFO[1m[36m
+DBA -> 0127[0101]	[0m	INIT_DBA_ATSS_SYSTEM_ALARM_PRIORITY[1m[36m
+DBA -> 0124[0301]	[0m	INIT_DBA_ATSS_SYSTEM_ROLLING_STOCK_INFO[1m[36m
+DBA -> 0121[1401]	[0m	INIT_DBA_ATSS_SYSTEM_PERFORMANCE_RUNNING_TIME_INFO [1m[36m
+DBA -> 0129[0801]	[0m	INIT_DBA_ATSS_SYSTEM_PLATFORM_DWELL_TIME[1m[36m
+DBA -> 0226[0066]	[0m	INIT_DBA_ATSS_SAFETY_COMMAND_COUNTER[1m[36m
+DBA -> 0213[0001]	[0m	INIT_DBA_ATSS_SEND_TRAIN_REGULATION_MODE[1m[32m
+				MODE = 3 (1-CUTOFF 2-HEADWAY 3-TIMETABLE)[0m[1m[36m
+DBA -> 0087[0259]	[0m	INIT_DBA_ATSS_TIME_TABLE_INFO[1m[32m
+				OWS_ID MATCHED [IN=1 = SELF=1][0m[1m[36m
+DBA -> 0165[0202]	[0m	INIT_DBA_ATSS_SYSTEM_JUNCTION_MODE_INFO[1m[36m
+DBA -> 0238[1303]	[0m	INIT_DBA_ATSS_HEADWAY_MODE_SETTING
+
+-------------------------------------------------------------------------------
+			ATS_NODE_CONFIGURATION :
++-------+-------+-------+-------+-------+-----------------------+-------+-----+
+| id	| level	| node	| id	| name	| IP			| index	| port|
++-------+-------+-------+-------+-------+-----------------------+-------+-----+
+|1	|OCC	|ATSD	|1	|ATSD	|  192.168.101.10	|1	|11001|
++-------+-------+-------+-------+-------+-----------------------+-------+-----+
+|1	|OCC	|ATSS	|2	|ATSS	|  192.168.101.50	|1	|11002|
++-------+-------+-------+-------+-------+-----------------------+-------+-----+
+|1	|OCC	|PC	|4	|PC	|  192.168.101.50	|1	|11004|
++-------+-------+-------+-------+-------+-----------------------+-------+-----+
+|1	|OCC	|DB	|5	|DB	|  192.168.101.50	|1	|11005|
++-------+-------+-------+-------+-------+-----------------------+-------+-----+
+|1	|OCC	|ATSD	|1	|ATSD	|  192.168.101.12	|6	|11001|
++-------+-------+-------+-------+-------+-----------------------+-------+-----+
+|1	|OCC	|ATSD	|1	|ATSD	|   192.168.34.23	|4	|11001|
++-------+-------+-------+-------+-------+-----------------------+-------+-----+
+|1	|OCC	|ATSD	|1	|ATSD	|    192.168.34.2	|5	|11001|
++-------+-------+-------+-------+-------+-----------------------+-------+-----+
+|1	|OCC	|ATSD	|1	|ATSD	|    192.168.34.6	|6	|11001|
++-------+-------+-------+-------+-------+-----------------------+-------+-----+
+|1	|OCC	|ATSS	|6	|AMSM	|  192.168.101.50	|1	|15001|
++-------+-------+-------+-------+-------+-----------------------+-------+-----+
+
+-------------------------------------------------------------------------------
+			BROADCAST_NODE_CONFIGURATION:
++-------+-------+-------+-------+-------+-----------------------+-------+-----+
+| id	| level	| node	| id	| name	| IP			| index	| port|
++-------+-------+-------+-------+-------+-----------------------+-------+-----+
+|100	|ALL	|ATSS	|2	|ATSS	| 192.168.255.255	|1	|45000|
++-------+-------+-------+-------+-------+-----------------------+-------+-----+
+
+
+[36m
+
+
+
+INIT_DATA REQUEST[0m[1m[32m
+0064(0010) -> DBA[0m[1m[36m
+DBA -> 0069[0897]	[0m	DBA_ATSS_SYSTEM_SELECTED_AUTHORITY_AREA[1m[36m
+DBA -> 0147[0030]	[0m	INIT_DBA_ATSS_SYS_PARAM_INFO[1m[36m
+DBA -> 0127[0101]	[0m	INIT_DBA_ATSS_SYSTEM_ALARM_PRIORITY[1m[36m
+DBA -> 0124[0301]	[0m	INIT_DBA_ATSS_SYSTEM_ROLLING_STOCK_INFO[1m[36m
+DBA -> 0121[1401]	[0m	INIT_DBA_ATSS_SYSTEM_PERFORMANCE_RUNNING_TIME_INFO [1m[36m
+DBA -> 0129[0801]	[0m	INIT_DBA_ATSS_SYSTEM_PLATFORM_DWELL_TIME[1m[36m
+DBA -> 0226[0066]	[0m	INIT_DBA_ATSS_SAFETY_COMMAND_COUNTER[1m[36m
+DBA -> 0213[0001]	[0m	INIT_DBA_ATSS_SEND_TRAIN_REGULATION_MODE[1m[32m
+				MODE = 3 (1-CUTOFF 2-HEADWAY 3-TIMETABLE)[0m[1m[36m
+DBA -> 0087[0259]	[0m	INIT_DBA_ATSS_TIME_TABLE_INFO[1m[32m
+				OWS_ID MATCHED [IN=1 = SELF=1][0m[1m[36m
+DBA -> 0165[0202]	[0m	INIT_DBA_ATSS_SYSTEM_JUNCTION_MODE_INFO[1m[36m
+DBA -> 0238[1303]	[0m	INIT_DBA_ATSS_HEADWAY_MODE_SETTING
++-------------------------------------------------------------------------------+
+INIT	= RIFrontCrossover_31_1_2022_registered.csv
+date	= 31/1/2022
+SW/LD	= 1
+state	= 2
++-------------------------------------------------------------------------------+[31m
+File Opened[0m[1m[32m
+0090 (1481) -> ATSD[0001][0m[1m[32m
+TIME-TABLE VALIDATION (RIFrontCrossover_31_1_2022_registered.csv): SUCCESSFUL[0m[35m[0m[1m[32m
+0033(0001) -> DBA[0m		MODE -> TIME_TABLE_MODE [31m
+IN:src=5,id=99 len =1276[0m
+TC31E INSERTED	current_train_id=9000	current_train_id=9000
+ -> ATSD: TC31E (31/105) R = 9000 T_id = 9000 ATSS_id = 9000 DIR = 1 Head=1 ATC =  4 p0_stp= 0 nxt_stn=0 nxt_plat=0 dest_stn=0 TH=0 SS=0 KDC=0 DM=0 CT=9001 radio=0 consist=0
+TC34E INSERTED	current_train_id=9001	current_train_id=9001
+ -> ATSD: TC34E (34/105) R = 9001 T_id = 9001 ATSS_id = 9001 DIR = 3 Head=1 ATC =  4 p0_stp= 0 nxt_stn=0 nxt_plat=0 dest_stn=0 TH=0 SS=0 KDC=0 DM=0 CT=9002 radio=0 consist=0
+
+-------------------------------------------------------------------------------
+			ATS_NODE_CONFIGURATION :
++-------+-------+-------+-------+-------+-----------------------+-------+-----+
+| id	| level	| node	| id	| name	| IP			| index	| port|
++-------+-------+-------+-------+-------+-----------------------+-------+-----+
+|1	|OCC	|ATSD	|1	|ATSD	|  192.168.101.10	|1	|11001|
++-------+-------+-------+-------+-------+-----------------------+-------+-----+
+|1	|OCC	|ATSS	|2	|ATSS	|  192.168.101.50	|1	|11002|
++-------+-------+-------+-------+-------+-----------------------+-------+-----+
+|1	|OCC	|PC	|4	|PC	|  192.168.101.50	|1	|11004|
++-------+-------+-------+-------+-------+-----------------------+-------+-----+
+|1	|OCC	|DB	|5	|DB	|  192.168.101.50	|1	|11005|
++-------+-------+-------+-------+-------+-----------------------+-------+-----+
+|1	|OCC	|ATSD	|1	|ATSD	|  192.168.101.12	|6	|11001|
++-------+-------+-------+-------+-------+-----------------------+-------+-----+
+|1	|OCC	|ATSD	|1	|ATSD	|   192.168.34.23	|4	|11001|
++-------+-------+-------+-------+-------+-----------------------+-------+-----+
+|1	|OCC	|ATSD	|1	|ATSD	|    192.168.34.2	|5	|11001|
++-------+-------+-------+-------+-------+-----------------------+-------+-----+
+|1	|OCC	|ATSD	|1	|ATSD	|    192.168.34.6	|6	|11001|
++-------+-------+-------+-------+-------+-----------------------+-------+-----+
+|1	|OCC	|ATSS	|6	|AMSM	|  192.168.101.50	|1	|15001|
++-------+-------+-------+-------+-------+-----------------------+-------+-----+
+
+-------------------------------------------------------------------------------
+			BROADCAST_NODE_CONFIGURATION:
++-------+-------+-------+-------+-------+-----------------------+-------+-----+
+| id	| level	| node	| id	| name	| IP			| index	| port|
++-------+-------+-------+-------+-------+-----------------------+-------+-----+
+|100	|ALL	|ATSS	|2	|ATSS	| 192.168.255.255	|1	|45000|
++-------+-------+-------+-------+-------+-----------------------+-------+-----+
+
+
+[36m
+
+
+
+INIT_DATA REQUEST[0m[1m[32m
+0064(0010) -> DBA[0m[1m[36m
+DBA -> 0069[0897]	[0m	DBA_ATSS_SYSTEM_SELECTED_AUTHORITY_AREA[1m[36m
+DBA -> 0147[0030]	[0m	INIT_DBA_ATSS_SYS_PARAM_INFO[1m[36m
+DBA -> 0127[0101]	[0m	INIT_DBA_ATSS_SYSTEM_ALARM_PRIORITY[1m[36m
+DBA -> 0124[0301]	[0m	INIT_DBA_ATSS_SYSTEM_ROLLING_STOCK_INFO[1m[36m
+DBA -> 0121[1401]	[0m	INIT_DBA_ATSS_SYSTEM_PERFORMANCE_RUNNING_TIME_INFO [1m[36m
+DBA -> 0129[0801]	[0m	INIT_DBA_ATSS_SYSTEM_PLATFORM_DWELL_TIME[1m[36m
+DBA -> 0226[0066]	[0m	INIT_DBA_ATSS_SAFETY_COMMAND_COUNTER[1m[36m
+DBA -> 0213[0001]	[0m	INIT_DBA_ATSS_SEND_TRAIN_REGULATION_MODE[1m[32m
+				MODE = 3 (1-CUTOFF 2-HEADWAY 3-TIMETABLE)[0m[1m[36m
+DBA -> 0087[0259]	[0m	INIT_DBA_ATSS_TIME_TABLE_INFO[1m[32m
+				OWS_ID MATCHED [IN=1 = SELF=1][0m[1m[36m
+DBA -> 0165[0202]	[0m	INIT_DBA_ATSS_SYSTEM_JUNCTION_MODE_INFO[1m[36m
+DBA -> 0238[1303]	[0m	INIT_DBA_ATSS_HEADWAY_MODE_SETTING
+TC31E INSERTED	current_train_id=9000	current_train_id=9000
+ -> ATSD: TC31E (31/105) R = 9000 T_id = 9000 ATSS_id = 9000 DIR = 1 Head=1 ATC =  4 p0_stp= 0 nxt_stn=0 nxt_plat=0 dest_stn=0 TH=0 SS=0 KDC=0 DM=0 CT=9001 radio=0 consist=0
+TC34E INSERTED	current_train_id=9001	current_train_id=9001
+ -> ATSD: TC34E (34/105) R = 9001 T_id = 9001 ATSS_id = 9001 DIR = 3 Head=1 ATC =  4 p0_stp= 0 nxt_stn=0 nxt_plat=0 dest_stn=0 TH=0 SS=0 KDC=0 DM=0 CT=9002 radio=0 consist=0
++-------------------------------------------------------------------------------+
+INIT	= RIFrontCrossover_31_1_2022_registered.csv
+date	= 31/1/2022
+SW/LD	= 1
+state	= 2
++-------------------------------------------------------------------------------+[31m
+File Opened[0m[1m[32m
+0090 (1481) -> ATSD[0001][0m[1m[32m
+TIME-TABLE VALIDATION (RIFrontCrossover_31_1_2022_registered.csv): SUCCESSFUL[0m[35m[0m[1m[32m
+0033(0001) -> DBA[0m		MODE -> TIME_TABLE_MODE [31m
+IN:src=5,id=99 len =1276[0m
+ -> ATSD: TC31E (31/105) R = 9000 T_id = 9000 ATSS_id = 9000 DIR = 1 Head=1 ATC =  4 p0_stp= 0 nxt_stn=0 nxt_plat=0 dest_stn=0 TH=0 SS=0 KDC=0 DM=0 CT=9002 radio=0 consist=0
+ -> ATSD: TC34E (34/105) R = 9001 T_id = 9001 ATSS_id = 9001 DIR = 3 Head=1 ATC =  4 p0_stp= 0 nxt_stn=0 nxt_plat=0 dest_stn=0 TH=0 SS=0 KDC=0 DM=0 CT=9002 radio=0 consist=0
+ -> ATSD: TC31E (31/105) R = 9000 T_id = 9000 ATSS_id = 9000 DIR = 1 Head=1 ATC =  4 p0_stp= 0 nxt_stn=0 nxt_plat=0 dest_stn=0 TH=0 SS=0 KDC=0 DM=0 CT=9002 radio=0 consist=0
+ -> ATSD: TC34E (34/105) R = 9001 T_id = 9001 ATSS_id = 9001 DIR = 3 Head=1 ATC =  4 p0_stp= 0 nxt_stn=0 nxt_plat=0 dest_stn=0 TH=0 SS=0 KDC=0 DM=0 CT=9002 radio=0 consist=0

@@ -47,68 +47,7 @@ ATSS_MessageProcessor msg_processor_obj;
 //     }
 //     while(head->next!=temp);
 // }
-// // ________________________________________________________________________________________________________________________________________________________________________________________________
-#include<bits/stdc++.h>
-#include<map>
-#include<string>
-#include<pthread.h>
-
-using namespace std;
-
-struct mystruct{
-    int a;
-    char b;
-    void logg(){
-        std::cout<<"\na="<<a<<" b="<<b<<endl;
-    }
-};
-struct mystruct2{
-    string a;
-    double b;
-    void logg(){
-        std::cout<<"\na="<<a<<" b="<<b<<endl;
-    }
-};
-static pthread_mutex_t map_lock1                = PTHREAD_MUTEX_INITIALIZER;
-
-/// using structure as template parameter
-template<class T>
-class Mystruct
-{
-    std::multimap<string,T>map1;
-public:
-    bool setData(string key, T data)
-    {
-        bool flag = false;
-        pthread_mutex_lock(&map_lock1);
-        auto it = map1.insert(std::pair<string,T>(key,data));
-        pthread_mutex_unlock(&map_lock1);
-        cout<<"\nelement added = "<<it->first<<endl;
-        return flag;
-    }
-    T getData(string key){
-        T val; memset(&val,0,sizeof(0));
-        auto it = map1.find(key);
-        if(it!=map1.end())
-        {
-            cout<<"\nelement="<<it->first;
-            return it->second;
-        }
-        return val;
-    }
-    bool deleteData(string key){
-        bool flag = false;
-        int count = map1.erase(key);
-        cout<<"\nelements erased="<<count<<endl;
-        return flag;
-    }
-    void printData(){
-        for(auto i=map1.begin();i!=map1.end();i++)
-        {
-            cout<<"key:"<<i->first<<" val: a="<<i->second.a<<" b="<<i->second.b<<endl;
-        }
-    }
-};
+//
 
 void print()
 {
@@ -127,18 +66,16 @@ int main()
     print(1,2.2,"hello",'v');
     string k="1";
     mystruct m;
+    mystruct2 m11;
+    Mystruct<mystruct> abc;
+    Mystruct<mystruct2> bcd;
 
     m.a = 10;
     m.b = 'b';
-    Mystruct<mystruct> abc;
     abc.setData(k,m);                  //abc.printData();
-    //mystruct bcd = abc.getData(k);     //bcd.logg();
-
-    mystruct2 m11;
 
     m11.a = "10";
     m11.b = 2.45456;
-    Mystruct<mystruct2> bcd;
     bcd.setData(k,m11);
 
     k="2";mystruct m2;
